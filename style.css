@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: rgb(224, 31, 73);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex; /* Default to flex for larger screens */
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(224, 31, 73);
+    border-bottom: 3px solid rgb(224, 31, 73);
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none; /* Hide navbar by default on small screens */
+        top: 60px; /* Adjust this based on your header height */
+        right: 0;
+        width: 100%; /* Full width */
+        border-left: 3px solid rgb(224, 31, 73);
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 0; /* Adjust padding */
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    nav a {
+        display: block; /* Block display for stacked items */
+        font-size: 2rem;
+        margin: 1rem 0; /* Adjust margins */
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(224, 31, 73);
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none; /* Hide navbar by default on small screens */
+        top: 60px; /* Adjust this based on your header height */
+        right: 0;
+        width: 100%; /* Full width */
+        border-left: 3px solid rgb(224, 31, 73);
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 0; /* Adjust padding */
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    nav a {
+        display: block; /* Block display for stacked items */
+        font-size: 2rem;
+        margin: 1rem 0; /* Adjust margins */
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(224, 31, 73);
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: rgb(224, 31, 73);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen anak secara vertikal */
+    justify-content: center; /* Menyelaraskan elemen anak di tengah secara vertikal */
+    align-items: flex-start; /* Menyelaraskan elemen anak di sebelah kiri */
+}
+
+.home-content h1,
+.home-content h3 {
+    margin: 0; /* Menghapus margin default untuk menyelaraskan dengan lebih baik */
+}
+
+/* Sesuaikan jarak antara h1 dan h3 jika perlu */
+.home-content h3 {
+    margin-top: 0.5rem; /* Sesuaikan jika ingin memberikan jarak */
+}
+
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(224, 31, 73);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(224, 31, 73);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: rgb(224, 31, 73);
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(224, 31, 73);
+    box-shadow: 0  0 25px #b74b4b;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: rgb(224, 31, 73);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: rgb(224, 31, 73);
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: rgb(224, 31, 73);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+/* Section Styling */
+section {
+    padding: 6rem 9%;
+    background-color: black;
+    color: white;
+}
+
+section h1 {
+    font-size: 4rem;
+    color: rgb(224, 31, 73);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section ul {
+    list-style: none;
+    text-align: center;
+}
+
+section ul li {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styles */
+#services {
+    text-align: center;
+    padding: 80px;
+    background-color: #0f0f0f; /* Warna hitam sama dengan bagian header atas */
+    color: white;
+}
+
+#services h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(224, 31, 73); /* Sesuai dengan warna yang kamu sebutkan */
+    font-family: 'Poppins', sans-serif;
+}
+
+#services p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #b0b0b0; /* Warna abu-abu untuk teks tambahan */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Service Box Styling */
+.service-box {
+    background-color: #1a1a1a; /* Warna abu-abu gelap untuk box */
+    border: 2px solid rgb(224, 31, 73); /* Warna sesuai, untuk border yang tegas */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: rgb(224, 31, 73); /* Warna judul yang serasi dengan tema */
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-box p {
+    color: #ccc; /* Warna teks yang lebih lembut */
+    font-size: 1rem;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(224, 31, 73, 0.6); /* Tambahkan efek shadow warna merah sesuai tema */
+}
+
+/* Section Styles */
+#skills {
+    text-align: center;
+    padding: 8z0px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+#skills h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(224, 31, 73); /* Warna yang sama untuk konsistensi */
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom per baris */
+    gap: 30px;
+    justify-content: center;
+}
+
+.skill-box {
+    background-color: #1a1a1a; /* Warna background box */
+    border: 2px solid rgb(224, 31, 73); /* Warna border */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill-box img.skill-icon {
+    width: 70px; /* Memperbesar ukuran gambar ikon */
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.skill-box h3 {
+    font-size: 1.5rem;
+    color: rgb(224, 31, 73); /* Warna untuk judul skill */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(224, 31, 73, 0.6);
+}
+
+/* Responsif: Mengubah jadi 2 kolom pada ukuran layar sedang */
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsif: Mengubah jadi 1 kolom pada ukuran layar kecil */
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section Styles */
+#education {
+    text-align: center;
+    padding: 80px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+#education h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(224, 31, 73); /* Warna yang sama untuk konsistensi */
+    font-family: 'Poppins', sans-serif;
+}
+
+#education p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #b0b0b0;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom per baris */
+    gap: 30px;
+    justify-content: center;
+}
+
+.education-box {
+    background-color: #1a1a1a; /* Warna background box */
+    border: 2px solid rgb(224, 31, 73); /* Warna border */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    height: 350px; /* Menambahkan tinggi kotak pendidikan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.education-image {
+    width: 120px; /* Ukuran gambar diperbesar */
+    height: 120px; /* Ukuran gambar diperbesar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    margin-bottom: 15px; /* Jarak di bawah gambar */
+}
+
+.education-box h3 {
+    font-size: 1.5rem;
+    color: rgb(224, 31, 73); /* Warna untuk judul pendidikan */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.education-box p {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Warna untuk deskripsi pendidikan */
+}
+
+/* Hover Effect */
+.education-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(224, 31, 73, 0.6);
+}
+
+/* Responsif: Mengubah jadi 2 kolom pada ukuran layar sedang */
+@media (max-width: 900px) {
+    .education-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsif: Mengubah jadi 1 kolom pada ukuran layar kecil */
+@media (max-width: 600px) {
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Section Styles */
+#experience {
+    text-align: center;
+    padding: 80px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+#experience h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(224, 31, 73); /* Warna yang sama untuk konsistensi */
+    font-family: 'Poppins', sans-serif;
+}
+
+#experience p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #b0b0b0;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column; /* Menyusun item secara vertikal */
+    align-items: center; /* Menjajarkan item di tengah */
+}
+
+.experience-item {
+    background-color: #1a1a1a; /* Warna background item */
+    border-radius: 15px; /* Sudut membulat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 15px; /* Mengurangi padding */
+    margin-bottom: 15px; /* Jarak antar item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50%; /* Mengatur lebar item */
+}
+
+.experience-item h3 {
+    font-size: 1.4rem; /* Mengurangi ukuran judul */
+    color: rgb(224, 31, 73); /* Warna untuk judul pengalaman */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px; /* Mengurangi jarak bawah judul */
+}
+
+.experience-item p {
+    font-size: 1rem; /* Mengurangi ukuran teks deskripsi */
+    color: #b0b0b0; /* Warna untuk deskripsi pengalaman */
+}
+
+/* Hover Effect */
+.experience-item:hover {
+    transform: translateY(-5px); /* Mengurangi gerakan saat hover */
+    box-shadow: 0 8px 16px rgba(224, 31, 73, 0.6);
+}
+
+/* Responsif: Mengubah menjadi 2 kolom pada ukuran layar sedang */
+@media (max-width: 900px) {
+    .experience-item {
+        width: 90%; /* Mengubah lebar item pada layar kecil */
+    }
+}
+
+/* Responsif: Mengubah menjadi 1 kolom pada ukuran layar kecil */
+@media (max-width: 600px) {
+    .experience-item {
+        width: 100%; /* Mengubah lebar item pada layar sangat kecil */
+    }
+}
+
+/* Section Styles */
+#contact {
+    text-align: center;
+    padding: 80px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+#contact h1 {
+    font-size: 3.5rem; /* Larger font size */
+    margin-bottom: 20px;
+    color: rgb(224, 31, 73);
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact p {
+    font-size: 1.5rem; /* Larger font size */
+    margin-bottom: 40px;
+    color: #b0b0b0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px; /* Set a max-width */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Change to column for better stacking */
+    align-items: flex-start; /* Align items to the start */
+}
+
+label {
+    display: block;
+    width: 100%; /* Change to 100% to stack vertically */
+    margin-bottom: 5px; /* Space between label and input */
+    color: rgb(224, 31, 73);
+    font-size: 2rem; /* Larger font size */
+}
+
+input, textarea {
+    width: 100%; /* Full width for inputs and textareas */
+    padding: 15px; /* Larger padding */
+    border: 2px solid rgb(224, 31, 73);
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1.2rem; /* Larger font size */
+    transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+input:focus, textarea:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+button {
+    background-color: rgb(224, 31, 73);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px; /* Larger padding */
+    font-size: 1.5rem; /* Larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: rgb(224, 31, 73);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #contact {
+        padding: 40px; /* Adjust padding for smaller screens */
+    }
+    
+    .contact-form {
+        width: 90%; /* Use a percentage for smaller screens */
+    }
+    
+    h1 {
+        font-size: 2.5rem; /* Adjust title size */
+    }
+    
+    label {
+        font-size: 1.5rem; /* Adjust label size */
+    }
+    
+    button {
+        font-size: 1.2rem; /* Adjust button size */
+        padding: 10px 20px; /* Adjust padding for button */
+    }
+}
+
+
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgb(224, 31, 73);
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.scroll-top:hover {
+    background-color: white;
+    color: rgb(224, 31, 73);
+}
+
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Youtuber";
+    }
+    81%, 100%{
+        content: "Script Writer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
