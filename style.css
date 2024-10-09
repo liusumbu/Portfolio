@@ -358,7 +358,7 @@ html {
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     padding: 30px;
-    width: 250px;
+    width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
@@ -408,14 +408,19 @@ html {
     border: 2px solid rgb(224, 31, 73); /* Warna border */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    padding: 30px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .skill-box img.skill-icon {
-    width: 70px; /* Memperbesar ukuran gambar ikon */
-    height: 80px;
+    width: auto; /* Memperbesar ukuran gambar ikon */
+    height: 100%;
+    max-height: 90px;
     margin-bottom: 40px;
 }
 
@@ -485,8 +490,8 @@ html {
 }
 
 .education-image {
-    width: 120px; /* Ukuran gambar diperbesar */
-    height: 120px; /* Ukuran gambar diperbesar */
+    width: 200px; /* Ukuran gambar diperbesar */
+    height: 200px; /* Ukuran gambar diperbesar */
     border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
     margin-bottom: 15px; /* Jarak di bawah gambar */
 }
